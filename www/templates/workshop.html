@@ -1,0 +1,27 @@
+<ion-view view-title="Workshop">
+	<ion-content>
+		<h1>Estar solo!</h1>
+		{{ twitter }}
+		<button ng-click="showAlert()" class="button button-royal button-block">
+			Click me!! 
+		</button>
+
+		<button ng-click="showOptions()" class="button button-calm button-block">
+			Do it again!!
+		</button>
+
+		<button ng-click="takePhoto()" class="button button-positive button-block icon-left ion-camera">
+			Selfie!!!!!
+		</button>
+
+		<img ng-show="image" src="{{ image }}" class="myImage" alt="">
+
+		<ion-list>
+			<ion-item class="item-avatar" collection-repeat="user in users">
+				<img ng-src="{{user.picture.medium}}" alt="">
+				<h2>{{ user.name.first }}</h2>
+				<p>{{ user.name.last }}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
